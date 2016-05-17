@@ -1,2 +1,2 @@
 # draw-mai, act-mai
-Maori pictionary and charades
+Aotearoa pictionary and charades
