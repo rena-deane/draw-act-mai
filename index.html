@@ -3,6 +3,7 @@
 <head>
   <title>act-mai, draw-mai</title>
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
   <div id="wrapper">
@@ -13,15 +14,39 @@
       </div>
       <!-- choose a category -->
       <div class="row">
-        <p>choose categories</p>  
+        <div class="four columns">
+          <p id="score">score</p>
+        </div>
+        <div class="four columns">
+          <p id="chooseCategory">choose categories</p>  
+        </div>
+        <div class="four columns">
+          <p id="timer">time</p>
+        </div>
       </div>  
-
+      <!-- random word here -->
       <div class="row">
-        <p id="entry">Entry goes here</p>            
+        <div class="twelve columns">
+          <p id="entry">Entry goes here</p>            
+        </div>
       </div>
 
       <div class="row">
-        <p id="definition"></p>
+        <div class="twelve columns">
+          <p id="definition">define the maori word</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="four columns">
+          <input type="button" name="pass" value="pass" id="pass"> 
+        </div>
+        <div class="four columns">
+          <input type="button" name="start" value="start" id="start"> 
+        </div>
+        <div class="four columns">
+          <input type="button" name="correct" value="correct" id="correct"> 
+        </div>
       </div>
     </div>
   </div>
