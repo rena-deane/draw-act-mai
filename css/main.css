@@ -1,5 +1,6 @@
 body{
-  background: #eeeeee;
+  background-color: #ede9da;
+  color: #c98a0c;
 }
 
 h1{
@@ -8,13 +9,18 @@ h1{
   margin: 0;
 }
 
-
 #container {
   margin: 0 auto;
   position: relative;
   text-align: center;
   width: 100%;
   box-sizing: border-box; }
+
+.top-row{
+  margin-right: auto;
+  margin-left: auto;
+  width: 75%;
+}
 
 .column,
 .columns {
@@ -25,16 +31,24 @@ h1{
 #entry{
   background-color: #f7e0af;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 5em;
+  font-size: 2.5em;
+  /* border-top: .5em solid #edcd8e; */
   margin: 0;
   padding: .75em 0;
 }
 
 #definition{
-  background-color: #f2eac1;
+  background-color: #f7e0af;
+  /* border-bottom: .5em solid #edcd8e; */
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.75em;
+  font-size: 1em;
   font-style: italic;
   margin: 0;
   padding: .75em;
+}
+
+input#start, input#pass, input#correct{
+  margin: 1em 0;
+  padding: 0;
+  width: 10em;
 }
