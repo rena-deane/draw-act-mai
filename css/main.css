@@ -44,6 +44,7 @@ h1{
 }
 
 #definition{
+  display: none;
   background-color: #f7e0af;
   /* border-bottom: .5em solid #edcd8e; */
   font-family: 'Source Sans Pro', sans-serif;
