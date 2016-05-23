@@ -4,12 +4,12 @@ getStack.addEventListener("click", function (){
   document.getElementById("myDropdown").classList.toggle("show");
 })
 
-// var liveScore = 0;
-// var addCorrect = document.getElementById('correct');
-// addCorrect.addEventListener("click", function(){
-//   liveScore += 1;
-//   $("#score").html(liveScore);
-// })
+var liveScore = 1;
+var addCorrect = document.getElementById('correct');
+addCorrect.addEventListener("click", function(){
+  $("#score").html(liveScore);
+  liveScore += 1;
+})
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
