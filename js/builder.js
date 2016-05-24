@@ -26,9 +26,11 @@ window.onclick = function(event) {
 }
 
 // 3 2 1 Countdown
+var timer;
 function  countdown(secs, element){
+
   var showSec = document.getElementById(element);
-  showSec.innerHTML = secs;
+  
   if(secs === 3){
     showSec.innerHTML = "On Your Marks";
   }
@@ -38,13 +40,15 @@ function  countdown(secs, element){
   if(secs === 1){
     showSec.innerHTML = "GO!";
   }
-  if (secs===0){
+  secs--;
+  console.log(secs);
+  timer = setTimeout('countdown('+secs+',"'+element+'")', 1200);
+  
+  if (secs < 1){
     clearTimeout(timer);
   }
-
-  secs--;
-  var timer = setTimeout('countdown('+secs+',"'+element+'")', 1200);
 }
+
 var startGame = document.getElementById('start');
 startGame.addEventListener("click", function(){
   countdown(3, "entry")
