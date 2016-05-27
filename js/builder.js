@@ -46,6 +46,7 @@ function  countdown(secs, element){
   
   if (secs < 1){
     clearTimeout(timer);
+    showMythsLegends();
   }
 }
 
@@ -55,3 +56,10 @@ startGame.addEventListener("click", function(){
 });
 
 // Choose Stack and Play
+function showMythsLegends (){
+  var generateIndex = Math.floor(maoriMyth.length * Math.random());
+
+  var grabMythsLegends = maoriMyth[generateIndex];
+  $("#entry").html(grabMythsLegends);
+
+}
