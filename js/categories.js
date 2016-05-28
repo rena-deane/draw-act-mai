@@ -8,7 +8,7 @@ var maoriMyth = [
 "Maui me te Ra", 
 "Te Ika a Maui", 
 "Maui raua ko Mahuika", 
-"Ngake rāua ko Whataitai", 
+"Ngake raua ko Whataitai", 
 "Turehu", 
 "Patupaiarehe", 
 "Hinewhaitiri", 
