@@ -20,8 +20,8 @@ window.onclick = function(event) {
 }
 
 // 3 2 1 Countdown
-var timer;
 function  countdown(secs, element, func){
+  var timer;
   var showSec = document.getElementById(element);
   if(secs === 3){
     showSec.innerHTML = "On Your Marks";
@@ -34,8 +34,7 @@ function  countdown(secs, element, func){
     showSec.innerHTML = "GO!";
   }
   secs--;
-  console.log(secs);
-  timer = setTimeout('countdown('+secs+',"'+element+'", '+func+')', 1100);
+  timer = setTimeout('countdown('+secs+',"'+element+'", '+func+')', 1000);
   
   if (secs < 0){
     clearTimeout(timer);
@@ -44,13 +43,23 @@ function  countdown(secs, element, func){
 }
 
 //60 Sec Clock
-// function timerClock(secs, element, func){
-//   var showTimerClock = document.getElementById('element');
+function timerClock(secsTimer, element){
+  var timerCountdown;
+  var showTimerClock = document.getElementById(element);
 
-//   when time === 0 $('.pass-correct').removeClass('show');
-//   get score
-//   return alert with score and list of items that were correct and incorrect.
-// }
+  if (secsTimer<61){
+    $('#timer').html(secsTimer);
+  }
+  
+  secsTimer--;
+  timerCountdown = setTimeout('timerClock('+secsTimer+',"'+element+'")', 1000);
+
+  if (secsTimer < 1){
+    clearTimeout(timerCountdown);
+    $('#timer').html("Time's Up!");
+    gameSummary();
+  }
+}
 
 // add score
 var addCorrect = document.getElementById('correct');
@@ -68,10 +77,18 @@ function addScore(){
 // pass button
 var passEntry = document.getElementById('pass');
 
+// game summary
+function gameSummary(){
+  $('.pass-correct').removeClass('show');
+  alert ("Times Up");
+  liveScore = 0;
+}
+
 // Maori Myths and Legends - cat1
 var playCat1 = document.getElementById('cat1');
 playCat1.addEventListener("click", function(){
   countdown(3, "entry", showMythsLegends);
+  timerClock(5, "timer")
   addCorrect.addEventListener("click", function(){
     showMythsLegends();
   });
