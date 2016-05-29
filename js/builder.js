@@ -17,7 +17,6 @@ function addScore(){
   $('#score').html(liveScore);
 }
 
-
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('#chooseStack')) {
@@ -48,7 +47,7 @@ function  countdown(secs, element, func){
   }
   secs--;
   console.log(secs);
-  timer = setTimeout('countdown('+secs+',"'+element+'", '+func+')', 1200);
+  timer = setTimeout('countdown('+secs+',"'+element+'", '+func+')', 1100);
   
   if (secs < 0){
     clearTimeout(timer);
@@ -56,9 +55,43 @@ function  countdown(secs, element, func){
   }
 }
 
+// pass button
+var passEntry = document.getElementById('pass');
+
+// Maori Myths and Legends - cat1
 var playCat1 = document.getElementById('cat1');
 playCat1.addEventListener("click", function(){
   countdown(3, "entry", showMythsLegends);
+  addCorrect.addEventListener("click", function(){
+    showMythsLegends();
+  });
+  passEntry.addEventListener("click", function(){
+    showMythsLegends();
+  });
+});
+
+//TV and Film - cat2
+var playCat2 = document.getElementById('cat2');
+playCat2.addEventListener("click", function(){
+  countdown(3, "entry", showTVFilms);
+  addCorrect.addEventListener("click", function(){
+    showTVFilms();
+  });
+  passEntry.addEventListener("click", function(){
+    showTVFilms();
+  });
+});
+
+//Play us a G - cat3
+var playCat3 = document.getElementById('cat3');
+playCat3.addEventListener("click", function(){
+  countdown(3, "entry", showSongs);
+  addCorrect.addEventListener("click", function(){
+    showSongs();
+  });
+  passEntry.addEventListener("click", function(){
+    showSongs();
+  });
 })
 
 // Choose Stack and Play
@@ -67,4 +100,18 @@ function showMythsLegends (){
 
   var grabMythsLegends = maoriMyth[generateIndex];
   $('#entry').html(grabMythsLegends);
+}
+
+function showTVFilms (){
+  var generateIndex = Math.floor(TVFilm.length * Math.random());
+
+  var grabTVFilm = TVFilm[generateIndex];
+  $('#entry').html(grabTVFilm);
+}
+
+function showSongs(){
+  var generateIndex = Math.floor(songs.length * Math.random());
+
+  var grabSongs = songs[generateIndex];
+  $('#entry').html(grabSongs);
 }
