@@ -19,13 +19,25 @@ window.onclick = function(event) {
   }
 }
 
+// add score
+var addCorrect = document.getElementById('correct');
+addCorrect.addEventListener("click", function(){
+  addScore();
+});
+
+
+var liveScore = 0;
+function addScore(){
+  liveScore += 1;
+  $('#score').html(liveScore);
+};
+
 // 3 2 1 Countdown
 function  countdown(secs, element, func){
   var timer;
   var showSec = document.getElementById(element);
   if(secs === 3){
     showSec.innerHTML = "On Your Marks";
-    $('.pass-correct').addClass('show');
   }
   if(secs === 2){
     showSec.innerHTML = "Get Set";
@@ -37,6 +49,7 @@ function  countdown(secs, element, func){
   timer = setTimeout('countdown('+secs+',"'+element+'", '+func+')', 1000);
   
   if (secs < 0){
+    $('.pass-correct').addClass('show');
     clearTimeout(timer);
     func();
   }
@@ -61,30 +74,19 @@ function timerClock(secsTimer, element){
   }
 }
 
-// add score
-var addCorrect = document.getElementById('correct');
-addCorrect.addEventListener("click", function(){
-  addScore();
-});
-
-
-var liveScore = 0;
-function addScore(){
-  liveScore += 1;
-  $('#score').html(liveScore);
-}
-
 // pass button
 var passEntry = document.getElementById('pass');
 
 // game summary
 function gameSummary(){
   $('.pass-correct').removeClass('show');
-  alert ("Times Up");
-  liveScore = 0;
+  var finalScore = document.getElementById('score').innerHTML;
+  alert ("You Scored: "+ finalScore);
+  $('#entry').html("\"Choose another category\"");
+  $('#score').html("0");
 }
 
-// Maori Myths and Legends - cat1
+////////////Maori Myths and Legends - cat1\\\\\\\\\\\\
 var playCat1 = document.getElementById('cat1');
 playCat1.addEventListener("click", function(){
   countdown(3, "entry", showMythsLegends);
@@ -97,7 +99,7 @@ playCat1.addEventListener("click", function(){
   });
 });
 
-//TV and Film - cat2
+////////////TV and Film - cat2\\\\\\\\\\\\
 var playCat2 = document.getElementById('cat2');
 playCat2.addEventListener("click", function(){
   countdown(3, "entry", showTVFilms);
@@ -109,7 +111,8 @@ playCat2.addEventListener("click", function(){
   });
 });
 
-//Play us a G - cat3
+////////////Play us a G - cat3\\\\\\\\\\\\
+
 var playCat3 = document.getElementById('cat3');
 playCat3.addEventListener("click", function(){
   countdown(3, "entry", showSongs);
@@ -121,7 +124,8 @@ playCat3.addEventListener("click", function(){
   });
 })
 
-// Choose Stack and Play
+////////////Choose Stack and Play\\\\\\\\\\\\
+
 function showMythsLegends (){
   var generateIndex = Math.floor(maoriMyth.length * Math.random());
 
