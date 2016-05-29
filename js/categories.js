@@ -21,7 +21,7 @@ var maoriMyth = [
 "Hikurangi", 
 "Kurangaituku"];
 
-var movies = [
+var TVFilm = [
 "Boy",
 "What we do in the shadows",
 "Hunt for the Wilderpeople",
