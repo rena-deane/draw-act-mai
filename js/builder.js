@@ -4,18 +4,6 @@ getStack.addEventListener("click", function (){
   document.getElementById("myDropdown").classList.toggle("show");
 })
 
-// add score
-var addCorrect = document.getElementById('correct');
-addCorrect.addEventListener("click", function(){
-  addScore();
-});
-
-
-var liveScore = 0;
-function addScore(){
-  liveScore += 1;
-  $('#score').html(liveScore);
-}
 
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
@@ -53,6 +41,28 @@ function  countdown(secs, element, func){
     clearTimeout(timer);
     func();
   }
+}
+
+//60 Sec Clock
+// function timerClock(secs, element, func){
+//   var showTimerClock = document.getElementById('element');
+
+//   when time === 0 $('.pass-correct').removeClass('show');
+//   get score
+//   return alert with score and list of items that were correct and incorrect.
+// }
+
+// add score
+var addCorrect = document.getElementById('correct');
+addCorrect.addEventListener("click", function(){
+  addScore();
+});
+
+
+var liveScore = 0;
+function addScore(){
+  liveScore += 1;
+  $('#score').html(liveScore);
 }
 
 // pass button
