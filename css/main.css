@@ -1,12 +1,18 @@
-body{
+body {
   background-color: #ffffff;
   color: #c98a0c;
 }
 
-h1{
+h1 {
   font-family: 'Amatic SC', cursive;
   font-size: 3em;
   margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  line-height: 1.5em;
+  color: #bbbbbb;
 }
 
 #container {
