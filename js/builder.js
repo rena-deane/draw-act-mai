@@ -90,7 +90,7 @@ function gameSummary(){
 var playCat1 = document.getElementById('cat1');
 playCat1.addEventListener("click", function(){
   countdown(3, "entry", showMythsLegends);
-  timerClock(5, "timer")
+  timerClock(63, "timer")
   addCorrect.addEventListener("click", function(){
     showMythsLegends();
   });
@@ -103,6 +103,7 @@ playCat1.addEventListener("click", function(){
 var playCat2 = document.getElementById('cat2');
 playCat2.addEventListener("click", function(){
   countdown(3, "entry", showTVFilms);
+  timerClock(63, "timer")
   addCorrect.addEventListener("click", function(){
     showTVFilms();
   });
@@ -116,6 +117,8 @@ playCat2.addEventListener("click", function(){
 var playCat3 = document.getElementById('cat3');
 playCat3.addEventListener("click", function(){
   countdown(3, "entry", showSongs);
+  timerClock(63, "timer")
+
   addCorrect.addEventListener("click", function(){
     showSongs();
   });
