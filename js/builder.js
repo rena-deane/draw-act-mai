@@ -57,7 +57,7 @@ function  countdown(secs, element, func){
 
 //60 Sec Clock
 function timerClock(secsTimer, element){
-  var timerCountdown;
+  var timerCountdown = 0;
   var showTimerClock = document.getElementById(element);
 
   if (secsTimer<61){
