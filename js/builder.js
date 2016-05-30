@@ -35,6 +35,7 @@ function addScore(){
 // 3 2 1 Countdown
 function  countdown(secs, element, func){
   var timer;
+  liveScore = 0;
   var showSec = document.getElementById(element);
   if(secs === 3){
     showSec.innerHTML = "On Your Marks";
@@ -84,7 +85,6 @@ function gameSummary(){
   alert ("You Scored: "+ finalScore);
   $('#entry').html("\"Choose another category\"");
   $('#score').html("0");
-  liveScore = 0;
 }
 
 ////////////Maori Myths and Legends - cat1\\\\\\\\\\\\
