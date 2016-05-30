@@ -5,14 +5,23 @@ body {
 
 h1 {
   font-family: 'Amatic SC', cursive;
+  font-weight: 600;
   font-size: 3em;
+  letter-spacing: .1em;
   margin: 0;
 }
 
 ul {
+  border-top: thin solid #eeeeee;
+  border-bottom: thin solid #eeeeee;
   list-style-type: none;
   line-height: 1.5em;
   color: #bbbbbb;
+  margin:0;
+}
+
+li{
+  margin-bottom: .25em;
 }
 
 #container {
@@ -22,6 +31,12 @@ ul {
   width: 100%;
   box-sizing: border-box; }
 
+#description {
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .column,
 .columns {
   width: 100%;
@@ -29,6 +44,7 @@ ul {
   box-sizing: border-box; }
 
 .top-row{
+  margin-top: 1em;
   margin-right: auto;
   margin-left: auto;
   width: 75%;
