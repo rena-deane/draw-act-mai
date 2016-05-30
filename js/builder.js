@@ -96,7 +96,7 @@ function gameSummary(){
 var playCat1 = document.getElementById('cat1');
 playCat1.addEventListener("click", function(){
   countdown(3, "entry", showMythsLegends);
-  timerClock(5, "timer")
+  timerClock(63, "timer")
   addCorrect.addEventListener("click", function(){
     showMythsLegends();
   });
