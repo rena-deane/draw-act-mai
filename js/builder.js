@@ -84,13 +84,14 @@ function gameSummary(){
   alert ("You Scored: "+ finalScore);
   $('#entry').html("\"Choose another category\"");
   $('#score').html("0");
+  liveScore = 0;
 }
 
 ////////////Maori Myths and Legends - cat1\\\\\\\\\\\\
 var playCat1 = document.getElementById('cat1');
 playCat1.addEventListener("click", function(){
   countdown(3, "entry", showMythsLegends);
-  timerClock(63, "timer")
+  timerClock(5, "timer")
   addCorrect.addEventListener("click", function(){
     showMythsLegends();
   });
