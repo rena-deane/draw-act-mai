@@ -82,7 +82,12 @@ var passEntry = document.getElementById('pass');
 function gameSummary(){
   $('.pass-correct').removeClass('show');
   var finalScore = document.getElementById('score').innerHTML;
-  alert ("You Scored: "+ finalScore);
+  if (liveScore === 0){
+    alert("Oh shame!");
+  }
+  else{
+    alert ("You Scored: "+ finalScore);
+  }
   $('#entry').html("\"Choose another category\"");
   $('#score').html("0");
 }
