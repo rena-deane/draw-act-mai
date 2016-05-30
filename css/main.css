@@ -50,7 +50,13 @@ li{
   width: 75%;
 }
 
-#chooseStack{
+#rules {
+  border: 0;
+  background: #dddddd;
+  color: #ffffff;
+}
+
+#chooseStack {
   border: 0;
   background: #c98a0c;
   color: #ffffff;
@@ -111,12 +117,14 @@ p#score, p#timer {
 }
 
 input#pass, input#correct{
-  margin: 1em 0;
   padding: 0;
   width: 15em;
 }
 
-.pass-correct {display: none}
+.pass-correct {
+  display: none;
+  margin: 1em 0;
+}
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
