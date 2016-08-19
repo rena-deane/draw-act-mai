@@ -7,7 +7,6 @@ AMDM is a personal project that I worked on before I started bootcamp.
 - [ ] Vanilla Javascript
 - [ ] Asking for help from teachers
 - [ ] Screencast explaining our project
-- 
 
 ## Next Steps
 
